@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -46,7 +47,9 @@ class ViewController: UIViewController {
         // dr llama cuando no hay mas preguntas
         let alert = UIAlertController(title: "Fin de la partida", message: "Has acertado \(correctQuestionAnswered) preguntas  prueba otra vez ", preferredStyle: .alert)
         let okAction  = UIAlertAction(title: "OK", style: .default) { (_) in
-            self.startGame()
+            self.dismiss(animated: true) {
+                self.startGame()
+            }
         }
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
@@ -95,8 +98,31 @@ class ViewController: UIViewController {
             ProgressHUD.showError("Lástima... \n \(self.currentQuestion.answerExplanation)")
         }
         
+        self.playSound(succes: isCorrect)
+        
         self.askNextQuestion()
         self.updateUIElements()
+        
+    }
+    
+    func playSound(succes:Bool) {
+        guard let succesUrl = Bundle.main.url(forResource: "succes", withExtension: "mp3") ,
+            let failUrl = Bundle.main.url(forResource: "fail", withExtension: "mp3") else {return}
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode:.default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            if succes {
+               let player = try AVAudioPlayer(contentsOf: succesUrl, fileTypeHint: AVFileType.mp3.rawValue)
+                
+                player.play()
+            } else {
+                let player = try AVAudioPlayer(contentsOf: failUrl, fileTypeHint: AVFileType.mp3.rawValue)
+                              
+                              player.play()
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
         
     }
     
