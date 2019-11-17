@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>Explanation</key>
+			<string>En efecto, disponen de tanto dinero que podrian erradicar la pobreza mundial</string>
+			<key>Answer</key>
+			<true/>
+			<key>Question</key>
+			<string>El Vaticano tiene la cantidad de dinero suficiente para acabar con la pobreza mundial dos veces</string>
+		</dict>
+        
+        <dict>
+            <key>Explanation</key>
+            <string>En efecto, disponen de tanto dinero que podrian erradicar la pobreza mundial</string>
+            <key>Answer</key>
+            <true/>
+            <key>Question</key>
+            <string>El Vaticano tiene la cantidad de dinero suficiente para acabar con la pobreza mundial dos veces</string>
+        </dict>
+        
+        <dict>
+            <key>Explanation</key>
+            <string></string>
+            <key>Answer</key>
+            <false/>
+            <key>Question</key>
+            <string>Los humanos son los únicos seres vivos que practican el sexo por placer</string>
+        </dict>
+        
+        <dict>
+           <key>Explanation</key>
+            <string></string>
+            <key>Answer</key>
+            <true/>
+            <key>Question</key>
+            <string>La semilla de la manzana contiene cianuro y es tóxica</string>
+        </dict>
+
+        <dict>
+            <key>Explanation</key>
+            <string>Un Koala no necesita beber nunca </string>
+            <key>Answer</key>
+            <false/>
+            <key>Question</key>
+            <string>Un Koala necesita beber al menos una vez al día</string>
+        </dict>
+        
+        <dict>
+            <key>Explanation</key>
+            <string></string>
+            <key>Answer</key>
+            <true/>
+            <key>Question</key>
+            <string>Edison, el inventor de la bombilla, temía a la oscuridad</string>
+        </dict>
+	</array>
+</dict>
+</plist>
